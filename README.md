@@ -58,7 +58,7 @@ There weren't any major issue encountered. I didn't use Google Cloud Platform be
 
 There's a lot to analyze within this dataset, but here are some very basic observations:
 
-** Number of Attacks **
+**Number of Attacks**
 A total of 1,124,413 attacks were logged. Broken down by honeypot the attack counts are:
 
 Count | Honeypot
@@ -74,6 +74,7 @@ Count | Honeypot
 
 Over a 24-hour sample, nearly 70% of attacks came from addresses in the United States, with around 20% originating from Russian addresses.
 
+**Malware Samples**
 Dionaea captured 8 samples of malware, signatures shown below:
 
 <img src="./dcap.png"/>
