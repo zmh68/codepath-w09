@@ -60,20 +60,63 @@ There's a lot to analyze within this dataset, but here are some very basic obser
 
 **Number of Attacks**
 
-A total of 1,124,413 attacks were logged. Broken down by honeypot the attack counts are:
+A total of 1,153,610 attacks were logged. Broken down by honeypot the attack counts are:
 
-Count | Honeypot
------ | --------
-984,227 | dionaea
-102,091 | cowrie
-16,225 | p0f
-9,076 | suricata
-7,895 | conpot
-4,876 | snort
-22 | elastichoney
-0 | wordpot
+Count | Percentage | Honeypot 
+----- | ---------- | --------
+998,465 | 86.55% | dionaea
+114,720 | 9.94% | cowrie
+16,677 | 1.45% | p0f
+9,362 | 0.81% | suricata
+9,320 | 0.81% | conpot
+5,041 | 0.44% | snort
+25 | 0% | elastichoney
+0 | 0% | wordpot
 
-Over a 24-hour sample, nearly 70% of attacks came from addresses in the United States, with around 20% originating from Russian addresses.
+
+IP addresses were resolved to associated countries using the [maxmind GeoLite2 database](https://dev.maxmind.com/geoip/geoip2/geolite2/), the countries with the highest number of attacks were:
+
+
+Count | Percentage | Country 
+----- | ---------- | --------
+463,914 | 40.21% | United States
+96,865 | 8.40% | Estonia
+71,651 | 6.21% | Ireland
+70,886 | 6.14% | United Kingdom
+58,593 | 5.80% | Russia
+43,660 | 3.78% | China
+37,569 | 3.26% | Vietnam
+36,579 | 3.17% | France
+36,325 | 3.15% | Ukraine
+35,801 | 3.10% | Netherlands
+22,643 | 1.96% | India
+19,004 | 1.65% | Indonesia
+12,850 | 1.11% | Brazil
+
+
+Since a single IP address could often be the source of many log entries, it is also interesting to examine the number of unique IP addresses per country. The countries with the highest number of unique IP addresses logged were:
+
+Count | Percentage | Country 
+----- | ---------- | --------
+6,741 | 11.70% | China
+6,651 | 11.54% | Vietnam
+4,831 | 8.38% | Russia
+4,218 | 7.32% | India
+4,176 | 7.25% | Indonesia
+4,052 | 7.03% | United States
+3,455 | 6.00% | Brazil
+1,942 | 3.37% | Taiwan
+1,490 | 2.59% | Thailand
+1,390 | 2.41% | Venezuela
+1,193 | 2.07% | Turkey
+1,088 | 1.89% | Ukraine
+974 | 1.69% | Micronesia 
+826 | 1.43% | Egypt
+823 | 1.43% | South Korea
+732 | 1.27% | Hong Kong
+700 | 1.21% | Iran
+601 | 1.04% | Philippines
+
 
 **Malware Samples**
 
@@ -91,4 +134,4 @@ The data collected is available in the [data](./data/) directory of this reposit
 
 * **instances.csv** - a CSV export detailing the hosting provider and data center location for each honeypot instance deployed.
 * **sensors.csv** - a CSV export of the data MHN keeps linking host identifiers to IP addresses.
-* **session_2018102900.json.zip** - a zip file of the file exported by mongoexport. (NOTE: zipped file uploaded, as original was ~411 MB)
+* **session_2018102901.json.zip** - a zip file of the file exported by mongoexport. (NOTE: zipped file uploaded, as original was ~423 MB)
